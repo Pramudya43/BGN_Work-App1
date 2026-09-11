@@ -1,0 +1,83 @@
+:root{
+    --navy:#0b3d63;
+    --navy-dark:#082944;
+    --gold:#c8a24a;
+    --bg:#eef1f4;
+    --card:#ffffff;
+    --border:#dde3e8;
+    --text:#1f2937;
+    --muted:#6b7280;
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;font-family:'Segoe UI', Arial, sans-serif;background:var(--bg);color:var(--text);}
+  .topbar{background:linear-gradient(135deg,var(--navy),var(--navy-dark));color:#fff;padding:18px 28px;}
+  .topbar h1{margin:0;font-size:19px;font-weight:600;}
+  .topbar p{margin:4px 0 0;font-size:13px;opacity:.8;}
+  .layout{display:grid;grid-template-columns:380px 1fr;gap:20px;padding:20px;align-items:start;}
+  @media (max-width:1000px){.layout{grid-template-columns:1fr;}}
+  .panel{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:18px 20px;}
+  .panel h2{font-size:14px;text-transform:uppercase;letter-spacing:.04em;color:var(--navy);margin:0 0 14px;border-bottom:2px solid var(--gold);padding-bottom:8px;}
+  fieldset{border:none;margin:0 0 16px;padding:0;}
+  legend{font-size:12px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.03em;margin-bottom:6px;}
+  label{display:block;font-size:12.5px;color:var(--muted);margin-top:10px;margin-bottom:4px;}
+  input, select{width:100%;padding:8px 10px;border:1px solid var(--border);border-radius:6px;font-size:13.5px;font-family:inherit;background:#fff;}
+  input:focus, select:focus{outline:2px solid var(--navy);outline-offset:1px;}
+  .actions{display:flex;gap:10px;margin-top:16px;}
+  button{flex:1;padding:10px 14px;border:none;border-radius:6px;font-size:13.5px;font-weight:600;cursor:pointer;}
+  .btn-primary{background:var(--navy);color:#fff;}
+  .btn-primary:hover{background:var(--navy-dark);}
+  .btn-secondary{background:#eef1f4;color:var(--navy);border:1px solid var(--border);}
+  .btn-secondary:hover{background:#e2e7ec;}
+  .note{font-size:11.5px;color:var(--muted);margin-top:10px;line-height:1.5;}
+  .badge{display:inline-block;font-size:10.5px;background:#fdf3de;color:#8a6414;border:1px solid #eddba7;padding:2px 8px;border-radius:20px;margin-left:6px;}
+
+  .preview-scroller{display:flex;flex-direction:column;align-items:center;gap:26px;}
+  .toolbar-row{width:793px;display:flex;justify-content:space-between;align-items:center;font-size:12.5px;color:var(--muted);margin-bottom:-6px;}
+  .sheet{
+    width:793px;
+    min-height:1122px;
+    background:#fff;
+    box-shadow:0 3px 14px rgba(0,0,0,.18);
+    padding:96px;
+    position:relative;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size:11pt;
+    line-height:1.15;
+    color:#111;
+  }
+  .page-number{position:absolute;top:38px;left:0;right:0;text-align:center;font-size:11pt;color:#222;}
+  .kop{display:flex;gap:16px;align-items:center;padding-bottom:10px;margin-bottom:6px;}
+  .kop img.crest{width:78px;height:78px;flex-shrink:0;object-fit:contain;}
+  .kop .org-name{font-weight:700;font-size:13.5pt;color:#5c7a92;}
+  .kop .org-name i{color:#5c7a92;}
+  .kop .org-addr{font-size:10pt;color:#555555;margin-top:2px;}
+  .kop-rule{border-top:1.5px solid #8296a6;margin-top:4px;}
+  .kop-rule.second{border-top:1.5px solid #8296a6;margin-top:2px;margin-bottom:14px;}
+  .meta{margin-bottom:14px;font-size:11pt;}
+  .meta-row{display:flex;}
+  .meta-row .k{width:82px;}
+  .meta-row .sep{width:12px;}
+  .meta-row .v{flex:1;}
+  .meta-row .v2{text-align:right;flex:1;}
+  .meta-first{display:flex;justify-content:space-between;}
+  .yth{margin-bottom:14px;}
+  ol.main{margin:0;padding-left:26px;list-style-position:outside;}
+  ol.main > li{margin-bottom:14px;text-align:justify;padding-left:2px;}
+  ol.sub{margin:8px 0 0 0;padding-left:24px;list-style-type:lower-alpha;}
+  ol.sub > li{margin-bottom:7px;text-align:justify;}
+  .placeholder-fill{color:#b45309;font-weight:600;}
+  .sign-block{margin-top:22px;text-align:right;}
+  .sign-block .role{margin-bottom:56px;}
+  table.lampiran{width:100%;border-collapse:collapse;margin:14px 0 18px;font-size:10.5pt;}
+  table.lampiran th, table.lampiran td{border:1px solid #111;padding:6px 8px;text-align:center;}
+  .tembusan{margin-top:20px;font-size:11pt;}
+  .tembusan ol{margin:6px 0 0 22px;padding:0;}
+  .lampiran-head{text-align:right;font-size:11pt;margin-bottom:14px;}
+  .lampiran-title{text-align:center;font-weight:700;font-size:11pt;margin-bottom:12px;}
+  @media print{
+    body{background:#fff;}
+    .topbar,.panel,.toolbar-row{display:none !important;}
+    .layout{display:block;padding:0;}
+    .preview-scroller{gap:0;}
+    .sheet{box-shadow:none;margin:0;page-break-after:always;}
+  }
